@@ -8,3 +8,7 @@ padre(salvador_rada_bonilla, rodrigo_rada_vaca).
 madre(martha_leticia_vaca_lopez, salvador_rada_vaca).
 madre(martha_leticia_vaca_lopez, angelica_rada_vaca).
 madre(martha_leticia_vaca_lopez, rodrigo_rada_vaca).
+hermano(X, Y):- padre(Z, X), padre(Z, Y).
+abuelo(X, Y):- padre_p(X, Z), padre(Z, Y).
+hermano_p(tonyo_rada_bonilla, salvador_rada_bonilla).
+tio(X, Y):- hermano_p(X, Z), padre(Z, Y).
